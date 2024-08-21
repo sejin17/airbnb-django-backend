@@ -1,2 +1,3 @@
 phyton
 Django
+Pillow
