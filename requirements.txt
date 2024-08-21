@@ -1,2 +1,2 @@
-phyton== 3
+phyton
 Django
