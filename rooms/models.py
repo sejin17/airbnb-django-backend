@@ -25,6 +25,7 @@ class Room(CommonModel):
     owner = models.ForeignKey(
         "users.User",
         on_delete=models.CASCADE,
+        related_name="rooms",
     )
     # many to many
     amenities = models.ManyToManyField(
@@ -35,10 +36,14 @@ class Room(CommonModel):
         "categories.Category",
         on_delete=models.SET_NULL,
         null=True,
-        blank=True
+        blank=True,
+        related_name="rooms",
     )
     def __str__(self) -> str:
         return self.name
+    
+    def total_amenities(self) -> int:
+        return self.amenities.count()
 
 class Amenity(CommonModel):
 

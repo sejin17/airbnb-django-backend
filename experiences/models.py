@@ -16,12 +16,14 @@ class Experience(CommonModel):
     host = models.ForeignKey(
         "users.User",
         on_delete=models.CASCADE,
+        related_name="experiences",
     )
     category = models.ForeignKey(
         "categories.Category",
         on_delete=models.SET_NULL,
         null=True,
-        blank=True
+        blank=True,
+        related_name="experiences",
     )
     perk = models.ManyToManyField(
         "experiences.Perk"
