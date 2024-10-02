@@ -29,14 +29,15 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
+    # system apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # custom apps 
     'rooms.apps.RoomsConfig',
     'users.apps.UsersConfig',
     "common.apps.CommonConfig",
@@ -47,6 +48,8 @@ INSTALLED_APPS = [
     "bookings.apps.BookingsConfig",
     "medias.apps.MediasConfig",
     "direct_messages.apps.DirectMessagesConfig",
+    # third part apps
+    "rest_framework"
 ]
 
 MIDDLEWARE = [
