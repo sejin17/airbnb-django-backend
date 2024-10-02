@@ -11,4 +11,5 @@ class Booking(admin.ModelAdmin):
         "check_in",
         "check_out",
         "experience_date",
+        "guests",
     )

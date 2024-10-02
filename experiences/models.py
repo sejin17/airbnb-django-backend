@@ -26,7 +26,8 @@ class Experience(CommonModel):
         related_name="experiences",
     )
     perk = models.ManyToManyField(
-        "experiences.Perk"
+        "experiences.Perk",
+        related_name="experiences",
     )
     start = models.TimeField()
     end = models.TimeField()
@@ -37,6 +38,7 @@ class Experience(CommonModel):
 class Perk(CommonModel):
 
     """ What is included on an Experience """
+    
     name = models.CharField(
         max_length=100,
     )
