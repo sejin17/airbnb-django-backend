@@ -30,25 +30,25 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-27#vh510@!c9n7_m=e%tpn$ke3sjfa_9bz8ssw(mw*f=!ic2=y'
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = 'django-insecure-27#vh510@!c9n7_m=e%tpn$ke3sjfa_9bz8ssw(mw*f=!ic2=y'
+# SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
-DEBUG = "RENDER" not in os.environ
+# DEBUG = "RENDER" not in os.environ
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "backend.airbnbclonetest.xyz",
-]
+# ALLOWED_HOSTS = [
+#     "localhost",
+#     "backend.airbnbclonetest.xyz",
+# ]
 
-RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+# RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
 
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+# if RENDER_EXTERNAL_HOSTNAME:
+#     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 INSTALLED_APPS = [
@@ -203,10 +203,10 @@ else:
     CSRF_TRUSTED_ORIGINS = ["https://airbnbclonetest.xyz"]
 
 CORS_ALLOW_CREDENTIALS = True
-GH_SECRET = env("GH_SECRET")
+# GH_SECRET = env("GH_SECRET")
 
-CF_ID = env("CF_ID")
-CF_TOKEN = env("CF_TOKEN")
+# CF_ID = env("CF_ID")
+# CF_TOKEN = env("CF_TOKEN")
 
 
 if not DEBUG:

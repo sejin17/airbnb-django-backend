@@ -13,7 +13,7 @@ from reviews.types import ReviewType
 class RoomType:
     id: auto
     name: auto
-    kind: auto
+    type: auto
     owner: "UserType"
 
     @strawberry.field
